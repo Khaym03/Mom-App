@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+        <!--<link rel="manifest" href="/site.webmanifest">-->
+        <!-- -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <script src="index.js" defer></script>
+        
+        <title>Precios</title>
+    </head>
+    <body>
+        
+        <!--<div id="preloader">-->
+        <!--    <span id="" class="preloader-words" >Buenos</span>-->
+        <!--    <span id="" class="preloader-words">Dias</span>-->
+        <!--    <span  class="preloader-words">Mama :D</span>-->
+        <!--</div>-->
+        
+        <div id="menu">
+            <div id="home-section" class="sections-in-menu">
+                
+                <h1>Cual es el <span class="text-decoration animated-bg">Precio</span> del <span class="text-decoration animated-bg">Dolar</span> hoy?</h1>
+                <div class="input-box" style="font-size: 1em; color: var(--color-coral);">
+                    <input id="input-dolar-price" type="text" autofocus maxlength="5" required>
+                    <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                </div>
+                <button id="submit-btn" class="">
+                    Actualizar
+                </button>
+                    <div id="fix-position">
+                        <div id="download-section">
+                        <a id="download-anchor" href='#'>
+                            <p>Proximamente</p>
+                        <i id="download-icon" class="fa-solid fa-file-arrow-down" ></i>
+                        </a>
+                        
+                        </div>
+                    </div>
+            </div>
+            <div id="Shopping-cart-section" class="sections-in-menu">
+                
+                <table id="shopping-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="text-decoration animated-bg">Productos</span>
+                            </th>
+                            <th>
+                                <span class="text-decoration animated-bg">Precios</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        
+                    </tbody>
+                </table>
+                <div id="total-container">
+                    <p>Total</p><span id='total'>0</span>
+                </div>
+                <div id="table-btn-section">
+                    <button id="clear" title="Borrar" class="twins-btn" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button id="calculate" title="Guardar" class="twins-btn" type="button">
+                        <i class="fa-regular fa-floppy-disk"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="converter-section" class="sections-in-menu">
+                <h1>Cuanto me das por?</h1>
+                <div class="inputs-in-a-row">
+                    <div class="custom-select">
+                        <select name="input-two" id="input-two" class="pair-inputs">
+                            <option class="options">Cloro</option>
+                            <option class="options">Lava Platos</option>
+                            <option class="options">Ariel</option>
+                            <option class="options">Cera</option>
+                            <option class="options">Acondiciona...</option>
+                            <option class="options">Shampoo</option>
+                            <option class="options">Desinfectante</option>
+                            <option class="options">Suavizante</option>
+                            <option class="options">Desengrasante</option>
+                        </select>
+                    </div>
+                    <input
+                        id = "input-one"
+                        class="pair-inputs"
+                        type="text"
+                        placeholder="Bs"
+                    />
+                </div>
+                <button id="calc-how-much-for" class="btn-in-converter-section" type="submit">
+                    Check
+                </button>
+                <h1>Cuanto cuesta?</h1>
+                <div class="inputs-in-a-row">
+                    <div class="custom-select">
+                        <select name="input-three" id="input-three" class="pair-inputs">
+                        <option class="options">Cloro</option>
+                        <option class="options">Lava Platos</option>
+                        <option class="options">Ariel</option>
+                        <option class="options">Cera</option>
+                        <option class="options">Acondiciona...</option>
+                        <option class="options">Shampoo</option>
+                        <option class="options">Desinfectante</option>
+                        <option class="options">Suavizante</option>
+                        <option class="options">Desengrasante</option>
+                    </select>
+                    </div>
+                    <input
+                        id = "input-four"
+                        class="pair-inputs"
+                        type="text"
+                        placeholder="ml"
+                    />
+                </div>
+                <button id="calc-ml-to-x" class="btn-in-converter-section" type="submit">Check</button>
+                <div id="answears">
+                    
+                </div>
+            </div>
+            <div id="wholesale-section" class="sections-in-menu">
+                
+               <div id="wholesale-select">
+                   <div class="pairs-grid">
+                        <label class="label-text">
+                            <span class="medium-emphasis">Selecciona un</span> Producto:
+                        </label>
+                        <select id="select-product-wholesale" class="pair-inputs wholesale--fields w-100" >
+                            <option value="0.74" class="options-in-wholesale">Lava Platos</option>
+                            <option value="0.75" class="options-in-wholesale">Ariel</option>
+                            <!--<option class="options-in-wholesale">Cera</option>-->
+                            <option value="0.86" class="options-in-wholesale">Shampoo</option>
+                            <option value="0.42" class="options-in-wholesale">Desinfectante</option>
+                            <option value="0.51" class="options-in-wholesale">Suavizante</option>
+                            <option value="0.96" class="options-in-wholesale">Desengrasante</option>
+                        </select>
+                    </div> 
+                    <div class="pairs-grid">
+                        <label class="label-text">
+                            <span class="medium-emphasis">Seleccione un</span> Descuento:
+                        </label>    
+                        <div id='wrapper-discount'>
+                            <div value='10' class="discounts ">10</div>
+                            <div value='15' class="discounts ">15</div>
+                            <div value='20' class="discounts">20</div>
+                            <div value='25' class="discounts">25</div>
+                        </div>
+                    </div>
+                    <div class="pairs-grid">
+                        <label class="label-text">
+                            <span class="medium-emphasis">Cuantos</span> Litros?
+                        </label>    
+                        <input id='quantity' class="pair-inputs wholesale--fields w-100" type="text" placeholder="Cantidad" required>
+                    </div>
+                    <div class="two-btn flex">
+                        <button id="clear-tbody" title="Borrar" class="delete--btn twins-btn" type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="add-to-table" title="Agregar a la Factura" class="twins-btn" type="button">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <nav id="navbar">
+                <div class="nav-icons" title="Area Principal" data-current-icon='active'>
+                    <a id="home-link"><i class="fa-solid fa-house-chimney fa-3x"></i></a>
+                </div>
+                <div class="nav-icons" title="Carrito de Compras">
+                    <a id="shopping-link"><i class="fa-solid fa-cart-plus fa-3x"></i></a>
+                </div>
+                <div class="nav-icons" title="Area de Mediciones">
+                    <a id="converter-link"><i class="fa-solid fa-ruler fa-3x"></i></a>
+                </div>
+                <div class="nav-icons" title="Facturacion Gaza">
+                    <i id="wholesale-prices-link" class="fa-solid fa-cash-register fa-3x"></i>
+                </div>
+            </nav>
+        </div>
+        <section id="table-content">
+            <div id="notification-of-saved">
+                <div>Guardado</div>
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <section id="container" class="in-middle">
+                <div class="table-header">
+                    <span class="text-decoration animated-bg">Productos</span>    
+                </div>
+                <div class="table-header">
+                    <span class="text-decoration animated-bg">Dolares $</span>    
+                </div>
+                <div class="table-header">
+                    <span class="text-decoration animated-bg">C/U</span>  
+                </div>
+                <div class="table-header">
+                    <span class="text-decoration animated-bg">1/2</span>    
+                </div>
+                <div class="table-header">
+                    <span class="text-decoration animated-bg">1/4</span>
+                </div>
+                <div class="product-cell odd card">
+                    Cloro
+                </div>
+                <div class="price-dolar-cell odd num card" data-product_name="cloro">
+                    0.58    
+                </div>
+                <div id="item-1" class="price-bolivar-cell odd num card" data-product_name="cloro">
+                    <!--BS  -->
+                </div>
+                <div id="item-1a" class="price-half-cell odd num card" data-product_name="cloro">
+                    <!--1/2-->
+                </div>
+                <div id="item-1b" class="price-quarter-cell odd num card" data-product_name="cloro">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell card">
+                    Lava Platos
+                </div>
+                <div class="price-dolar-cell num card" data-product_name="lava-platos">
+                    1.00    
+                </div>
+                <div id="item-2" class="price-bolivar-cell num card" data-product_name="lava-platos">
+                    <!--BS  -->
+                </div>
+                <div id="item-2a" class="price-half-cell num card" data-product_name="lava-platos">
+                    <!--1/2-->
+                </div>
+                <div id="item-2b" class="price-quarter-cell num card" data-product_name="lava-platos">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell odd card">
+                    Ariel
+                </div>
+                <div class="price-dolar-cell odd num card" data-product_name="ariel">
+                    1.00    
+                </div>
+                <div id="item-3" class="price-bolivar-cell odd num card" data-product_name="ariel">
+                    <!--BS  -->
+                </div>
+                <div id="item-3a" class="price-half-cell odd num card" data-product_name="ariel">
+                    <!--1/2-->
+                </div>
+                <div id="item-3b" class="price-quarter-cell odd num card" data-product_name="ariel">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell card">
+                    Cera
+                </div>
+                <div class="price-dolar-cell num card" data-product_name="cera">
+                    0.75    
+                </div>
+                <div id="item-4" class="price-bolivar-cell num card" data-product_name="cera">
+                    <!--BS  -->
+                </div>
+                <div id="item-4a" class="price-half-cell num card" data-product_name="cera">
+                    <!--1/2-->
+                </div>
+                <div id="item-4b" class="price-quarter-cell num card" data-product_name="cera">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell odd card">
+                    Acondiciona...
+                </div>
+                <div class="price-dolar-cell odd num card" data-product_name="acondicionador">
+                    1.50    
+                </div>
+                <div id="item-5" class="price-bolivar-cell odd num card" data-product_name="acondicionador">
+                    <!--BS  -->
+                </div>
+                <div id="item-5a" class="price-half-cell odd num card" data-product_name="acondicionador">
+                    <!--1/2-->
+                </div>
+                <div id="item-5b" class="price-quarter-cell odd num card" data-product_name="acondicionador">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell card">
+                   Shampoo
+                </div>
+                <div class="price-dolar-cell num card" data-product_name="shampoo">
+                    1.40    
+                </div>
+                <div id="item-6" class="price-bolivar-cell num card" data-product_name="shampoo">
+                    <!--BS  -->
+                </div>
+                <div id="item-6a" class="price-half-cell num card" data-product_name="shampoo">
+                    <!--1/2-->
+                </div>
+                <div id="item-6b" class="price-quarter-cell num card" data-product_name="shampoo">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell odd card">
+                    Desinfectante
+                </div>
+                <div class="price-dolar-cell odd num card" data-product_name="desinfectante">
+                    0.68    
+                </div>
+                <div id="item-7" class="price-bolivar-cell odd num card" data-product_name="desinfectante">
+                    <!--BS  -->
+                </div>
+                <div id="item-7a" class="price-half-cell odd num card" data-product_name="desinfectante">
+                    <!--1/2-->
+                </div>
+                <div id="item-7b" class="price-quarter-cell odd num card" data-product_name="desinfectante">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell card">
+                    Suavizante
+                </div>
+                <div class="price-dolar-cell num card" data-product_name="suavizante">
+                    0.80    
+                </div>
+                <div id="item-8" class="price-bolivar-cell num card" data-product_name="suavizante">
+                    <!--BS  -->
+                </div>
+                <div id="item-8a" class="price-half-cell num card" data-product_name="suavizante">
+                    <!--1/2-->
+                </div>
+                <div id="item-8b" class="price-quarter-cell num card" data-product_name="suavizante">
+                    <!--1/4-->
+                </div>
+                <div class="product-cell odd card">
+                    Desengrasante
+                </div>
+                <div class="price-dolar-cell odd num card" data-product_name="desengrasante">
+                    1.30    
+                </div>
+                <div id="item-9" class="price-bolivar-cell odd num card" data-product_name="desengrasante">
+                    <!--BS  -->
+                </div>
+                <div id="item-9a" class="price-half-cell odd num card" data-product_name="desengrasante">
+                    <!--1/2-->
+                </div>
+                <div id="item-9b" class="price-quarter-cell odd num card" data-product_name="desengrasante">
+                    <!--1/4-->
+                </div>
+            </section>
+            <section id="billing" class="in-middle disable flex">
+              
+              
+                <table id="table-bill">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="text-decoration animated-bg">Cantidad</span>
+                            </th>
+                            <th>
+                                <span class="text-decoration animated-bg">Productos</span>
+                            </th>
+                            <th>
+                                <span class="text-decoration animated-bg">Precios</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-bill">
+                    </tbody>
+                </table>
+                <div id="whole-total" class="flex">
+                    <div class="total-in-whole">
+                        Total
+                    </div>
+                    <div id="final-price" class="total-in-whole">
+                        0
+                    </div>
+                </div>
+            
+            </section>
+        </section>
+        <div class="fake-border-popup disable animated-bg">
+            <dialog id="pop-1" class="pop-up disable">
+                <div class="center-element">
+                    <p id="p-in-pop-1"></p>
+                </div>
+                <button id="ok-btn-1" class="ok-btn" type="submit">Ok</button>
+            </dialog>
+        </div>
+        <div class="fake-border-popup-2 disable animated-bg">
+            <dialog id="pop-2" class="pop-up disable">
+                <div class="center-element">
+                    <p id="p-in-pop-2"></p>
+                </div>
+                <button id="ok-btn-2" class="ok-btn" type="submit">Ok</button>
+            </dialog>
+        </div>
+    </body>
+</html>
