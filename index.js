@@ -1,3 +1,5 @@
+import './styles.css';
+
 // const PRELOADER = document.getElementById('preloader');
 // const WORDS_IN_PRELOADER = PRELOADER.querySelectorAll('span');
 
@@ -794,7 +796,7 @@ WholesaleSection.classList.add('disable');
         return totalSum
     }
     
-  calcMytheValues(localStorage)
+//   calcMytheValues(localStorage)
   
   function LocalCreator(storage){
       
